@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  background-image: url('./img/terraria2.jpg');
+  background-size:cover;
+}
+
+:root {
+  --cor-primaria-fonte: #FFFFFF;
+  --fonte-principal:  'Montserrat';
+  
+
+}
+
+#conteudo {
+  background-color: rgba(2, 2, 2, .8);
+  display: grid;
+  grid-template-columns: 2fr 1.5fr ;
+  grid-auto-rows: 200px;
+  width: 70%;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--cor-primaria-fonte);
+  font-family: var(--fonte-principal);
+  font-weight: 300;
+
+  
+}
+
+/* css perfil: foto, nascionalidade, nivel e framework */
+
+#info-perfil{
+  max-width: 70%;
+  display: flex;
+  margin: 20px 15px;
+
+}
+#meu-nome {
+  font-weight: 400;
+
+}
+#nome-pais {
+  display: flex;
+  margin-left: 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+#nascionalidade {
+  display: flex;
+}
+#nome-do-pais {
+  margin-left: 5px;
+}
+#foto-perfil {
+  width: 150px;
+}
+
+#info-framework-e-insignia {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 25px;
+}
+#info-framework-e-insignia span#nivel{
+  border: #d82121 solid 2px;
+  font-size: .8em;
+  background-color: rgba(216,33,33, .2);
+  padding: 5px;
+  font-weight: 300;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#linguagem-principal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: rgba(2, 2, 2, .9);
+  font-size: 1.2em;
+}
+
+#nome-linguagem {
+  margin-left: 15px;
+  display: flex;
+  flex-direction:column;
+}
+#nivel-titulo {
+  font-weight: 400;
+}
+
+#quantidade-xp {
+  font-size: .5em;
+}
+#icone-framework {
+  width: 50px;
+}
