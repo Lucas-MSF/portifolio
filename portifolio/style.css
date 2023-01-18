@@ -1,103 +1,249 @@
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
 body {
-  background-image: url('./img/terraria2.jpg');
-  background-size:cover;
+    width: 60%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 70% 30%, minmax(200px, 1fr);
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas: 
+    "header header"
+    "main  aside"
+    "footer footer"
+    
+    ;
+    background-color: currentColor;
+    background-image: url('./img/terraria.jpg');
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
-
+  
 :root {
-  --cor-primaria-fonte: #FFFFFF;
-  --fonte-principal:  'Montserrat';
-  
-
-}
-
-#conteudo {
-  background-color: rgba(2, 2, 2, .8);
-  display: grid;
-  grid-template-columns: 2fr 1.5fr ;
-  grid-auto-rows: 200px;
-  width: 70%;
-  margin: 0 auto;
-  flex-direction: row;
-  justify-content: space-between;
-  color: var(--cor-primaria-fonte);
-  font-family: var(--fonte-principal);
-  font-weight: 300;
-
+    --cor-primaria-fonte: #FFFFFF;
+    --fonte-principal:  'Montserrat';
+    --cor-card-background: rgba(0, 0, 0, .4);
+    --cor-conteudo-background: rgba(0, 0, 0, .7);
+    --cor-titulo-card-background:  rgba(197, 205, 207, .3);
+    --cor-comentario-texto: #d3d3d3;
+    --cor-comentario-card: rgb(45, 45, 45, 1);
+    
   
 }
+/* Header config */
+header {
+    grid-area: header;  
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:  "foto insignia";
+    background-color: var(--cor-conteudo-background);
+}
+.info-perfil{
+    grid-area: foto;
+    display: flex;
+    margin: 20px 30px;
+    color: var(--cor-primaria-fonte);
+    font-family: var(--fonte-principal);
+}
+.foto-perfil{
+  width: 250px;
+  height: 250px;
+}
+.titulos {
+    font-weight: 400;
+  }
+.nome-pais {
+    display: flex;
+    margin-left: 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.nascionalidade {
+    margin-top: .5em;
+    display: flex;
+}
+.nome-do-pais {
+    margin-left: .2em;
+}
+.informacoes {
+    margin-top: 2em;
+    font-size: 1.1em;
+}
+.info-framework-e-insignia {
+    grid-column: insignia;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-primaria-fonte);
+    font-family: var(--fonte-principal);
+    margin: 3em 1.8em;
+}
+.nivel{
+    border: #d82121 solid 3px;
+    font-size: .8em;
+    font-weight: 300;
+    background-color: rgba(216,33,33, .1);
+    padding: .3em;
+    font-weight: 300;
+    border-radius: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+.linguagem-principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    margin-top: 20px;
+    background-color: rgba(2, 2, 2, .5);
+    border-radius: 8px;
+    font-size: .8em;
+}
+  
+  .nome-linguagem {
+    font-size: 2em;
+    margin-left: 15px;
+    display: flex;
+    flex-direction:column;
+  }
+  .titulo-nivel{
+    font-size: 1.8em;
+  }
+  .quantidade-xp {
+    font-size: .6em;
+  }
+  .icone-framework {
+    width: 50px;
+  }
+/*---------------------------------------------------------*/
 
-/* css perfil: foto, nascionalidade, nivel e framework */
-
-#info-perfil{
-  max-width: 70%;
-  display: flex;
-  margin: 20px 15px;
+main {
+    color: var(--cor-primaria-fonte);
+    grid-area: main;
+    background-color: var(--cor-conteudo-background);
 
 }
-#meu-nome {
-  font-weight: 400;
-
+.card-destaque{
+    width: 95%;
+    margin: 1em auto 3em;
 }
-#nome-pais {
-  display: flex;
-  margin-left: 20px;
-  padding: 10px;
-  flex-direction: column;
+.titulo-card{
+    font-size: 1.5em;
+    background-color: var(--cor-titulo-card-background);
+    padding: .5em;
+    border-radius: 5px 5px 0 0;
+  
 }
-#nascionalidade {
-  display: flex;
+.icones-tecnologias{
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    background-color:var(--cor-card-background);
 }
-#nome-do-pais {
-  margin-left: 5px;
+.destaque{
+    background-color:rgba(2, 2, 2, .5);
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5em;
+    justify-content: space-around;
+  
 }
-#foto-perfil {
-  width: 150px;
-}
-
-#info-framework-e-insignia {
-  display: flex;
-  flex-direction: column;
-  margin: 20px 25px;
-}
-#info-framework-e-insignia span#nivel{
-  border: #d82121 solid 2px;
-  font-size: .8em;
-  background-color: rgba(216,33,33, .2);
-  padding: 5px;
-  font-weight: 300;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-#linguagem-principal {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: rgba(2, 2, 2, .9);
-  font-size: 1.2em;
+.icones {   
+    width: 5em;
 }
 
-#nome-linguagem {
-  margin-left: 15px;
-  display: flex;
-  flex-direction:column;
+aside {
+    grid-area: aside;
+    color: var(--cor-primaria-fonte);
+    background-color: var(--cor-conteudo-background);
+    display: flex;
+    justify-content: end;
+    
 }
-#nivel-titulo {
-  font-weight: 400;
+.menu-card {
+    background-color: var(--cor-card-background);
+    margin-right:25px ;
+    width: 70%;
+    height: 100%;
+    padding: .5em;
+    font-size: 1.3em;
+    border-radius: 5px;
 }
+.menu-titulo{
+    margin: 0 0 .7em .5em;
+    font-size: 2em;
+    font-weight: 300;
+}
+.lista-menu{
+    list-style: none;
+}
+.lista-menu a{
+    font-size: 1.3em;
+    margin: 0 0 1em .7em;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--cor-primaria-fonte);
+  
+}
+.lista-menu a:hover{
+   text-decoration: underline;  
+}
+.opcoes-menu{
+    padding: .5em 0;
+}
+footer {
+    grid-area: footer;
+    color: var(--cor-primaria-fonte);
+    background-color: var(--cor-conteudo-background);
 
-#quantidade-xp {
-  font-size: .5em;
 }
-#icone-framework {
-  width: 50px;
+.titulo-footer{
+    margin: 1em 1em;
+    font-size: 2.5em;
+}
+.comentarios{
+    margin: 1em 1em;
+}
+.comentario{
+    padding: .5em;
+    border-radius: 5px;
+    background-color: var(--cor-comentario-card);
+    display: flex;
+    align-items: flex-start;
+    margin: 1em auto;
+}
+.foto-pessoa {
+    border-radius: 50%;
+    padding: .5em;
+    height: 100px;
+    width: 100px;
+}
+.pessoa-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1em;
+    flex-wrap: wrap;
+}
+.pessoa-nome{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.descricao-pessoa{
+    font-size: 1.3em;
+}
+.comentario-pessoa{
+    color: var(--cor-comentario-texto);
+    font-size: 1.4em;
+    margin-top: .4em;
 }

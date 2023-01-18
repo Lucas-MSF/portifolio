@@ -1,37 +1,115 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-  <title>Portifolio</title>
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
-    
-    <section id="conteudo">
-        <div  id="info-perfil">
-            <img id="foto-perfil" src="./img/foto-perfil.jpg" alt="foto Lucas">
-            <div id="nome-pais">
-                <h1 id="meu-nome">Lucas Macena</h1>
-                <div id="nascionalidade">
+    <header>
+        <div  class="info-perfil">
+            <img class="foto-perfil" src="./img/foto-perfil.jpg" alt="foto Lucas">
+            <div class="nome-pais">
+                <h1 class="titulos">Lucas Macena</h1>
+                <div class="nascionalidade">
                     <img src="./img/brazil-icon.png" width="20px" height="20px"></img>
-                    <p id="nome-do-pais">Brasil</p>
+                    <p class="nome-do-pais">Brasil</p>
+                </div>
+                <div class="informacoes">
+                    <p>Graduando em Análise e Desenvolvimento de Sistemas pelo Instituto Federal Baiano - Campus Guanambi.
+                        Em contato com a programação a 4 anos, atualmente trabalhando como desenvolvedor Web com Laravel (Framework PHP)</p>
+                </div>
+            </div>
+        </div> 
+
+         <div class="info-framework-e-insignia">
+            <h2 class="titulos titulo-nivel">Nível <span class="nivel">Jr</span></h2>
+            <div class="linguagem-principal">
+                <img class="icone-framework" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
+                <p class="nome-linguagem">Laravel <span class="quantidade-xp">1 Ano XP</span></p>
+            </div>
+        </div> 
+    </header>
+    <main>
+        <div class="card-destaque">
+            <h3 class='titulos titulo-card'>Tecnologias destaque:</h3>
+            <div class="icones-tecnologias">
+                <div class="destaque">
+                    <img class="icones" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="Icone Laravel">
+                    <img class="icones" src="./img/php.png" alt="Icone PHP">
+                    <img class="icones" src="./img/icone-javascript.png" alt="Icone Javascript">
+                    <img class="icones" src="./img/icone-git.png" alt="Icone git">
+                    <img class="icones" src="./img/icone-mysql.png" alt="Icone mysql">
+                    <img class="icones" src="./img/html.png" alt="Icone htlml">
+                    <img class="icones" src="./img/icone-css.png" alt="Icone css">
                 </div>
             </div>
         </div>
-        <div id="info-framework-e-insignia">
-            <h2 id="nivel-titulo">Nível <span id="nivel">Jr</span></h2>
-            <div id="linguagem-principal">
-                <img id="icone-framework" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png" alt="">
-                <p id="nome-linguagem">Laravel <span id="quantidade-xp">1 Ano XP</span></p>
+        <div class="card-destaque">
+            <h3 class='titulos titulo-card'>Cursos:</h3>
+            <div class="icones-tecnologias">
+                <div class="destaque">
+                    <img class="icones" src="./img/if-baiano.png" alt="Icone ifbaiano">
+                    <img class="icones" src="./img/alura.jpg" alt="Icone alura">
+                    <img class="icones" src="./img/udemy.png" alt="Icone udemy">
+                    <img class="icones" src="./img/rocketseat.jpeg" alt="Icone rocketseat">
+                </div>
             </div>
         </div>
-    </section>
-      
+       
+    </main>
+    <aside>
+        <div class="menu-card">
+            <h4 class="menu-titulo">Menu:</h4>
+            <ul class="lista-menu">
+                <li class="opcoes-menu"><a href="#">Sobre mim</a></li>
+                <li class="opcoes-menu"><a href="#">Certificados</a></li>
+                <li class="opcoes-menu"><a href="#">Contato</a></li>
+                <li class="opcoes-menu"><a href="#">Escolher background</a></li>
+            </ul>
+        </div>
+    </aside>
+    <footer>
+        <h4 class="titulos titulo-footer">Comentarios:</h4>
+        <div class="comentarios">
+            <div class="comentario">
+                <img src="https://media.licdn.com/dms/image/D4D03AQExqwQVscDmoA/profile-displayphoto-shrink_800_800/0/1666399081598?e=1679529600&v=beta&t=XNX-8cunjjQEPblsOazFKAaHMp6iB17iqRQuxSGYHYo" alt="" class="foto-pessoa">
+                <div class="comentario-card">
+                        <div class="pessoa-info">
+                        <h1 class="pessoa-nome">Claudio Henrique</h1>
+                        <p class="descricao-pessoa"> Desenvolvedor na Foco Tecnologia e Marketing</p>
+                        <p class="comentario-pessoa">O Lucas é uma pessoa responsável e dedicada. Captura a regra de negócio facilmente e busca sempre melhor realizar o seu trabalho. Ao longo dessa experiência que tivemos, pude observar que ele se empenha ao máximo para resolver os problemas e criar novas features com qualidade.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="https://media.licdn.com/dms/image/C5603AQHp18uoftq59w/profile-displayphoto-shrink_400_400/0/1653406739966?e=1679529600&v=beta&t=G2y7EJkbaEVx4ZWx0ycalnH9mA9dtKwrpsy1k68WBsY" alt="" class="foto-pessoa">
+                <div class="comentario-card">
+                        <div class="pessoa-info">
+                            <h1 class="pessoa-nome">Gabriel Lobo</h1>
+                            <p class="descricao-pessoa">Full Stack Developer | Python | Django | Javascript | Typescript | React | Git | AWS | Clean Code | TDD | Heroku</p>
+                            <p class="comentario-pessoa">Durante nossos estudos juntos, Lucas sempre se destacou pela sua dedicação e habilidade em resolver problemas complexos. Além disso, ele possui excelentes habilidades de comunicação e trabalho em equipe, o que o torna uma excelente opção para qualquer projeto de desenvolvimento de software.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comentario">
+                <img src="https://media.licdn.com/dms/image/D4D03AQHChqwqaDX3Kw/profile-displayphoto-shrink_400_400/0/1671496444718?e=1679529600&v=beta&t=aCM8M2Sc8pDckqR0ltme-WQcsYshk78CYtY_VsYw39o" alt="" class="foto-pessoa">
+                <div class="comentario-card">
+                        <div class="pessoa-info">
+                            <h1 class="pessoa-nome">João Marcos Neves da Silva</h1>
+                            <p class="descricao-pessoa">Analista e desenvolvedor de sistemas | Laravel | Django| SQL | API | RESTFUL API</p>
+                            <p class="comentario-pessoa">Tive um imenso prazer em estudar durante 2 anos com a Lucas Macena. Ele é um profissional extremamente competente, focada no trabalho, tem um ótimo relacionamento interpessoal com os parceiros de trabalho. O Lucas Macena é uma pessoa muito dinâmica, trabalha muito bem em equipe e não se incomoda em ter desafios no trabalho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 </body>
-
 </html>
